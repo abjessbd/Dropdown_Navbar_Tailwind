@@ -1,0 +1,94 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./output.css" rel="stylesheet">
+    <title>Dropdown Responsive Navbar Tailwind</title>
+</head>
+
+<body>
+    <!-- Navbar for Desktop start-->
+    <header class="py-4 shadow-md bg-gray-400">
+        <!-- <header class="py-4 shadow-md w-full fixed top-0 z-50"> -->
+        <nav class="container mx-auto flex px-4 justify-between items-center">
+            <div>
+                <img src="../assets/image/Nav-Logo.png" alt="logo" class="cursor-pointer w-full">
+            </div>
+            <ul class="hidden lg:flex md:gap-5">
+                <li><a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">Home</a></li>
+                <li>
+                    <div class="relative">
+                        <a href="#" id="dropdown-btn"
+                            class="transition-all duration-200 pb-7 hover:border-b-4 border-green">About</a>
+                        <ul id="dropdown-menu"
+                            class="absolute top-11 -left-5 bg-slate-400 w-24 p-2 hidden flex-col items-center space-y-3 rounded-b">
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">He</a>
+                            </li>
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">She</a>
+                            </li>
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">They</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">Department</a>
+                </li>
+                <li><a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">Doctor</a></li>
+                <li><a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">Pages</a></li>
+                <li><a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">News</a></li>
+                <li><a href="#" class="transition-all duration-200 pb-7 hover:border-b-4 border-green">Contact</a></li>
+            </ul>
+            <div class="flex gap-5">
+                <button class="hidden md:block btn-primary transition-all hover:bg-opacity-90">Make An
+                    Appoinment</button>
+                <img src="../assets/image/hamburger.svg" alt="hamburger menu" class="w-7 lg:hidden cursor-pointer"
+                    id="hamburger-icon">
+                <img src="../assets/image/cross.svg" alt="cross menu" class="w-7 hidden lg:hidden cursor-pointer"
+                    id="cross-icon">
+            </div>
+        </nav>
+
+        <!-- Navbar for Mobile -->
+        <div id="mobile-nav"
+            class="container bg-gray-400 -translate-x-full transition-all duration-500 px-4 md:px-10 py-5 w-3/4 h-screen bg-white fixed top-0 flex flex-col float-start gap-10 lg:hidden">
+            <div>
+                <img src="../assets/image/Nav-Logo.png" alt="logo" class="cursor-pointer">
+            </div>
+            <ul class="flex flex-col gap-5">
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">Home</a></li>
+                <li>
+                    <div class="relative">
+                        <a href="#" id="dropdown-btn"
+                            class="transition-all duration-200 hover:border-b-4 border-green">About</a>
+                        <ul id="dropdown-menu"
+                            class="absolute top-6 -left-5 bg-slate-400 px-8 py-2 hidden flex-col items-center space-y-3 rounded-b z-10">
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">He</a>
+                            </li>
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">She</a>
+                            </li>
+                            <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">They</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">Department</a></li>
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">Doctor</a></li>
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">Pages</a></li>
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">News</a></li>
+                <li><a href="#" class="transition-all duration-200 hover:border-b-4 border-green">Contact</a></li>
+            </ul>
+            <div>
+                <button class="md:hidden btn-primary transition-all hover:bg-opacity-90">Make An Appoinment</button>
+            </div>
+        </div>
+    </header>
+    <!-- Navbar for Desktop end -->
+
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

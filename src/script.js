@@ -1,8 +1,8 @@
 const hamburger = document.getElementById('hamburger-icon');
 const cross = document.getElementById('cross-icon');
 const mobileNav = document.getElementById('mobile-nav');
-const dropdownBtns = document.querySelectorAll('#dropdown-btn');
-const dropdownMenus = document.querySelectorAll('#dropdown-menu');
+// const dropdownBtns = document.querySelectorAll('#dropdown-btn');
+// const dropdownMenus = document.querySelectorAll('#dropdown-menu');
 
 hamburger.addEventListener('click', () => {
     mobileNav.classList.toggle('-translate-x-full');
@@ -15,11 +15,18 @@ cross.addEventListener('click', () => {
     hamburger.classList.remove('hidden');
 })
 
-dropdownBtns.forEach(dropdownBtn => {
-    dropdownBtn.addEventListener('click', () => {
-        dropdownMenus.forEach(dropdownMenu => {
-            dropdownMenu.classList.toggle('hidden');
-            dropdownMenu.classList.toggle('flex');
-        })
-    })
-})
+// dropdownBtns.forEach(dropdownBtn => {
+//     dropdownBtn.addEventListener('click', () => {
+//         dropdownMenus.forEach(dropdownMenu => {
+//             dropdownMenu.classList.toggle('hidden');
+//             dropdownMenu.classList.toggle('flex');
+//         })
+//     })
+// })
+
+const dropdownBtn = (menuId) => {
+    const dropdownMenu = document.getElementById(menuId);
+
+    dropdownMenu.classList.toggle('hidden');
+    dropdownMenu.classList.toggle('flex');
+};
